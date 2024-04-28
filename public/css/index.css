@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #333333;
+    --fg-color: #f2f2f2;
+
+    --item-bg: #279557;
+    --border: #2ead65;
+}
+
+body {
+
+    font-family: "Inder", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    
+    gap: 20px;
+}
+
+.title {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+.search {
+    width: 55%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.search input {
+    width: 80%;
+
+    font-size: 20px;
+
+    border-radius: 40px;
+    padding-left: 10px;
+
+    line-height: 10px;
+    background-color: var(--item-bg);
+    color: var(--fg-color);
+    border: 1px solid var(--border);
+
+
+}
+
+.search input::placeholder {
+    font-size: 20px;
+    text-align: center;
+    color: var(--fg-color);
+
+}
+
+.search button {
+    border-radius: 45px;
+    background-color: var(--item-bg);
+    color: var(--fg-color);
+
+    border: 1px solid var(--border);
+    cursor: grab;
+}
+
+.search button:hover {
+    background-color: #195f37;
+
+    transition: 500ms all;
+}
+
+.products {
+    display: none;
+
+    width: 90%;
+    height: 70%;
+
+    transition: all 500ms;
+
+    overflow-y: scroll;
+}
+
+.products.active {
+    display: grid;
+
+    grid-template-columns: repeat(5, auto);
+    grid-auto-rows: max-content;
+
+    gap: 10px;
+}
+
+#info {
+    color: #ea5659;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.product h2 {
+    font-size: 16px;
+}
+
+.product img {
+    width: 100%;
+    min-height: 70%;
+    max-height: 75%;
+    
+}
+
+.product .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product .under{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
